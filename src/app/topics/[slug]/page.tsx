@@ -16,7 +16,7 @@ export default async function TopicShowPage({
   return (
     <div className="min-h-full grid grid-cols-1 sm:grid-cols-4 gap-4 p-4">
       <div className="flex flex-col col-span-3">
-        <h1 className="capitalize text-2xl font-bold mb-2">{slug}</h1>
+        <h1 className="capitalize text-2xl font-bold mb-6">{slug}</h1>
         <p className="">{topic?.description}</p>
         <Divider className="my-5 invisible" />
         <PostList fetchData={() => fetchPostByTopicSlug(slug)} />

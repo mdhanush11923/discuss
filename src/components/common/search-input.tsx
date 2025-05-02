@@ -40,7 +40,7 @@ export default function SearchInput() {
     <form action={actions.search}>
     <Input
     name="term"
-      classNames={{ innerWrapper: "items-center gap-1" }}
+      classNames={{ innerWrapper: "items-center gap-1 h-10" }}
       variant="bordered"
       defaultValue={searchParams.get("term") || ""}
       placeholder="Search"

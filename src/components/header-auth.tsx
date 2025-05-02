@@ -34,7 +34,7 @@ export default function HeaderAuth() {
         <NavbarItem className="hidden xm:flex">
           <form action={actions.signIn}>
             <Button
-              className="bg-gradient-to-r from-white to-gray-100 hover:bg-gray-400"
+              className="bg-gradient-to-r from-white to-gray-100 hover:bg-gray-400 h-10 sm:h-12"
               variant="ghost"
               type="submit"
             >
@@ -44,7 +44,11 @@ export default function HeaderAuth() {
         </NavbarItem>
         <NavbarItem>
           <form action={actions.signIn}>
-            <Button className="bg-black" color="primary" type="submit">
+            <Button
+              className="bg-black h-10 sm:h-12"
+              color="primary"
+              type="submit"
+            >
               Sign up
             </Button>
           </form>
