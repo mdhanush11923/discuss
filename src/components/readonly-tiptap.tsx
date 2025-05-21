@@ -24,7 +24,7 @@ const ReadOnlyTiptap: React.FC<ReadOnlyTiptapProps> = ({ htmlContent }) => {
     editorProps: {
       attributes: {
         class:
-          "prose prose-sm sm:prose-base lg:prose-lg xl:prose-2xl m-5 focus:outline-none",
+          "text-base m-5 focus:outline-none",
       },
     },
   });
@@ -34,7 +34,7 @@ const ReadOnlyTiptap: React.FC<ReadOnlyTiptapProps> = ({ htmlContent }) => {
   return (
     <EditorContent
       editor={editor}
-      className="border-2 [&_ul]:list-disc [&_ol]:list-decimal [&_ul]:pl-6 [&_ol]:pl-6 leading-relaxed"
+      className="border-2 [&_ul]:list-disc [&_ol]:list-decimal [&_ul]:pl-6 [&_ol]:pl-6  leading-relaxed"
     />
   );
 };

@@ -1,6 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@plugin "@tailwindcss/typography";
 
 :root {
   --background: #ffffff;
@@ -17,6 +18,10 @@
     --background: #0a0a0a;
     --foreground: #ededed;
   }
+}
+
+.ProseMirror p > br.ProseMirror-trailingBreak {
+  display: none !important;
 }
 
 @font-face {
