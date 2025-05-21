@@ -70,10 +70,15 @@ export async function createPost(
   let post: Post;
 
   try {
+    let content = result.data.content.trim();
+    if (!/<[a-z][\s\S]*>/i.test(content)) {
+      content = `<p>${content}</p>`;
+    }
+
     post = await db.post.create({
       data: {
         title: result.data.title,
-        content: result.data.content,
+        content,
         userId: session.user.id as string,
         topicId: topic.id
       }

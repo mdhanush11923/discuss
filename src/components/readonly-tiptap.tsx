@@ -1,0 +1,39 @@
+"use client";
+
+import React from "react";
+import { EditorContent, useEditor } from "@tiptap/react";
+import Document from "@tiptap/extension-document";
+import Paragraph from "@tiptap/extension-paragraph";
+import Text from "@tiptap/extension-text";
+import BulletList from "@tiptap/extension-bullet-list";
+import OrderedList from "@tiptap/extension-ordered-list";
+import ListItem from "@tiptap/extension-list-item";
+
+type ReadOnlyTiptapProps = {
+  htmlContent: string;
+};
+
+const ReadOnlyTiptap: React.FC<ReadOnlyTiptapProps> = ({ htmlContent }) => {
+  const editor = useEditor({
+    extensions: [Document, Paragraph, Text, BulletList, OrderedList, ListItem],
+    content: htmlContent,
+    editable: false,
+    editorProps: {
+      attributes: {
+        class:
+          "prose prose-sm sm:prose-base lg:prose-lg xl:prose-2xl m-5 focus:outline-none",
+      },
+    },
+  });
+
+  if (!editor) return null;
+
+  return (
+    <EditorContent
+      editor={editor}
+      className="border-2 [&_ul]:list-disc [&_ol]:list-decimal [&_ul]:pl-6 [&_ol]:pl-6 leading-relaxed"
+    />
+  );
+};
+
+export default ReadOnlyTiptap;

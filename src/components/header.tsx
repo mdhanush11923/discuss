@@ -8,7 +8,7 @@ export default function Header() {
   return (
     <div>
       <Navbar className="shadow mb-6 py-3">
-        <NavbarBrand className="font-bold  text-lg sm:text-xl">
+        <NavbarBrand className="font-black text-lg sm:text-xl">
           <Link href="/">Discuss</Link>
         </NavbarBrand>
         <NavbarContent className="" justify="center">

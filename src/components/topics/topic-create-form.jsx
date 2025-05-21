@@ -30,7 +30,7 @@ export default function TopicCreateForm() {
       placement="bottom"
     >
       <PopoverTrigger>
-        <Button className="bg-black w-full max-w-52" color="primary" radius="lg">
+        <Button className="bg-black w-full max-w-52" color="primary" radius="sm">
           <CreateIcon /> Create a Topic
         </Button>
       </PopoverTrigger>
@@ -41,7 +41,7 @@ export default function TopicCreateForm() {
           validationBehavior="aria"
           validationErrors={formState.errors}
         >
-          <div className="flex flex-col gap-4 p-4 w-72">
+          <div className="flex flex-col gap-4 sm:p-4 w-full sm:w-72">
             <h3 className="text-lg">Create a Topic</h3>
             <Input
               name="name"

@@ -19,12 +19,12 @@ export default function RootLayout({
       <body
         className={` antialiased`}
       >
-        <div className="container min-h-screen mx-auto px-4 max-w-6xl">
           <Providers>
             <Header />
+        <div className="container min-h-screen mx-auto px-4 max-w-6xl">
             {children}
-          </Providers>
         </div>
+          </Providers>
             <Footer />
       </body>
     </html>

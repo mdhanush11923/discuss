@@ -34,9 +34,10 @@ export default function HeaderAuth() {
         <NavbarItem className="hidden xm:flex">
           <form action={actions.signIn}>
             <Button
-              className="bg-gradient-to-r from-white to-gray-100 hover:bg-gray-400 h-10 sm:h-12"
+              className="bg-gradient-to-r from-white to-gray-100 hover:bg-gray-400 h-10 sm:h-11 sm:w-24"
               variant="ghost"
               type="submit"
+              radius="sm"
             >
               Sign in
             </Button>
@@ -45,8 +46,9 @@ export default function HeaderAuth() {
         <NavbarItem>
           <form action={actions.signIn}>
             <Button
-              className="bg-black h-10 sm:h-12"
+              className="bg-black h-10 sm:h-11 sm:w-24 "
               color="primary"
+              radius="sm"
               type="submit"
             >
               Sign up
