@@ -8,6 +8,9 @@ import Text from "@tiptap/extension-text";
 import BulletList from "@tiptap/extension-bullet-list";
 import OrderedList from "@tiptap/extension-ordered-list";
 import ListItem from "@tiptap/extension-list-item";
+import HorizontalRule from '@tiptap/extension-horizontal-rule'
+import HardBreak from "@tiptap/extension-hard-break";
+import Bold from "@tiptap/extension-bold";
 
 type ReadOnlyTiptapProps = {
   htmlContent: string;
@@ -15,7 +18,7 @@ type ReadOnlyTiptapProps = {
 
 const ReadOnlyTiptap: React.FC<ReadOnlyTiptapProps> = ({ htmlContent }) => {
   const editor = useEditor({
-    extensions: [Document, Paragraph, Text, BulletList, OrderedList, ListItem],
+    extensions: [Document, Paragraph, Text, Bold, HardBreak, HorizontalRule, BulletList, OrderedList, ListItem],
     content: htmlContent,
     editable: false,
     editorProps: {
