@@ -8,8 +8,11 @@ interface PostShowProps {
 
 export default async function PostShow({ postId }: PostShowProps) {
   const post = await db.post.findFirst({
+    include: {
+      user: { select: { name: true } },
+    },
     where: {
-      id: postId
+      id: postId,
     }
   })
 
@@ -19,7 +22,11 @@ export default async function PostShow({ postId }: PostShowProps) {
 
   return (
     <div className="flex flex-col gap-5">
-      <h1 className="text-3xl font-bold mt-10 text-center">{post.title}</h1>
+      <h1 className="text-3xl font-bold mt-10">{post.title}</h1>
+      <div className="flex gap-5 text-gray-500 text-sm">
+        <p className="">{post.user.name}</p>
+        <p className="">{post.createdAt.toDateString()}</p>
+      </div>
       <ReadOnlyTiptap htmlContent={post.content} />
     </div>
   );

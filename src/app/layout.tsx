@@ -16,16 +16,14 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={` antialiased`}
-      >
-          <Providers>
-            <Header />
-        <div className="container min-h-screen mx-auto px-4 max-w-6xl">
+      <body className={`antialiased`}>
+        <Providers>
+          <Header />
+          <div className="container min-h-screen mx-auto px-4 max-w-6xl">
             {children}
-        </div>
-          </Providers>
-            <Footer />
+          </div>
+        </Providers>
+        <Footer />
       </body>
     </html>
   );

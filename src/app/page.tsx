@@ -14,7 +14,7 @@ export default function HomePage() {
         </h1>
         <PostList fetchData={() => fetchTopPosts()} />
       </div>
-      <div className="flex flex-col rounded-md border max-w-72 mr-[-80px] px-5 py-3 shadow">
+      <div className="flex flex-col rounded-md border max-w-72 px-5 py-3 shadow">
         <div className="flex w-full justify-center py-3">
           <TopicCreateForm />
         </div>

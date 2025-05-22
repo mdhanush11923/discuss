@@ -13,8 +13,8 @@ export default async function TopicList() {
           <div key={topic.id}>
             <Link href={paths.topicShow(topic.slug)}>
               <Button
-                className="p-5"
-                radius="full"
+                className="p-4"
+                radius="sm"
                 variant="flat"
                 size="sm"
               >
