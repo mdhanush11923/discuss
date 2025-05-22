@@ -7,7 +7,7 @@ import StarsRoundedIcon from "@mui/icons-material/StarsRounded";
 
 export default function HomePage() {
   return (
-    <div className="grid re:grid-cols-4 grid-cols-1 gap-4">
+    <div className="grid re:grid-cols-4 grid-cols-1 gap-6">
       <div className="re:col-span-3">
         <h1 className="text-xl m-2 mb-5">
           <StarsRoundedIcon fontSize="small" /> Top Posts

@@ -32,7 +32,7 @@ export default async function CommentList({ postId }: CommentListProps) {
 
 
   return (
-    <div className="space-y-3">
+    <div className="space-y-6">
       <h1 className="text-lg font-bold">{heading}</h1>
       {renderedComments}
     </div>

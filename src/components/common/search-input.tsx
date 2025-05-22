@@ -38,18 +38,20 @@ export default function SearchInput() {
   const searchParams = useSearchParams();
   return (
     <form action={actions.search}>
-    <Input
-    name="term"
-      classNames={{ innerWrapper: "items-center gap-1 h-full",
-        input: "h-full"
-       }}
-      variant="bordered"
-      defaultValue={searchParams.get("term") || ""}
-      placeholder="Search"
-      startContent={
-        <SearchIcon className="text-black/50 mb-0.5 dark:text-white/90 text-slate-400 pointer-events-none flex-shrink-0" />
-      }
-    />
+      <Input
+        name="term"
+        classNames={{
+          innerWrapper: "items-center gap-1 h-full",
+          input: "h-full hover:bg-black",
+          inputWrapper: "bg-stone-50 hover:bg-stone-200",
+        }}
+        variant="bordered"
+        defaultValue={searchParams.get("term") || ""}
+        placeholder="Search"
+        startContent={
+          <SearchIcon className="text-black/50 mb-0.5 dark:text-white/90 text-stone-400 pointer-events-none flex-shrink-0" />
+        }
+      />
     </form>
   );
 }

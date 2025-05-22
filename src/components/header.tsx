@@ -7,7 +7,7 @@ import { Suspense } from "react";
 export default function Header() {
   return (
     <div>
-      <Navbar className="shadow mb-6 py-3">
+      <Navbar maxWidth="lg" isBlurred className="fixed top-0 z-50 bg-white shadow mb-6 py-3">
         <NavbarBrand className="font-black text-lg sm:text-xl">
           <Link href="/">Discuss</Link>
         </NavbarBrand>

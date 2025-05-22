@@ -4,6 +4,7 @@ import { useActionState, useEffect, useRef, useState } from "react";
 import { Textarea, Button } from "@heroui/react";
 import * as actions from "@/actions";
 import FormButton from "../common/form-button";
+import ReplyIcon from "@mui/icons-material/Reply";
 
 interface CommentCreateFormProps {
   postId: string;
@@ -41,7 +42,7 @@ export default function CommentCreateForm({
   const form = (
     <form action={action} ref={formRef}>
       <div
-        className="border rounded-md p-5 bg-gray-100 hover:border-gray-400 transition cursor-text space-y-3"
+        className="border-2 rounded-2xl p-5 shadow-sm bg-gray-100 hover:border-gray-400 transition cursor-text space-y-3"
         onClick={handleFocusTextarea}
       >
         <Textarea
@@ -50,17 +51,19 @@ export default function CommentCreateForm({
           placeholder="Add a comment..."
           isInvalid={!!formState.errors.content}
           radius="sm"
+          minRows={1}
           errorMessage={formState.errors.content?.join(", ")}
           classNames={{
             inputWrapper:
-              "p-0 shadow-none",
+              "p-0 min-h-0 shadow-none",
             base: "bg-gray-100",
             innerWrapper: "bg-gray-100",
-            mainWrapper: "hover:bg-gray-100"
+            mainWrapper: "hover:bg-gray-100",
+            input: "min-h-5 text-md"
           }}
         />
 
-        <div className="flex justify-end m-[-10px]">
+        <div className="flex justify-end m-[-6px]">
           <FormButton isPending={isPending}>Create Comment</FormButton>
         </div>
 
@@ -80,6 +83,7 @@ export default function CommentCreateForm({
         size="sm"
         variant="light"
         onPress={() => setOpen(!open)}
+        startContent={<ReplyIcon fontSize="small" />}
       >
         Reply
       </Button>

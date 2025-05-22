@@ -5,16 +5,23 @@ import ListItem from "@tiptap/extension-list-item";
 import OrderedList from "@tiptap/extension-ordered-list";
 import Paragraph from "@tiptap/extension-paragraph";
 import Text from "@tiptap/extension-text";
+import StarterKit from "@tiptap/starter-kit";
+
 import { EditorContent, useEditor } from "@tiptap/react";
 import React from "react";
+import HorizontalRule from "@tiptap/extension-horizontal-rule";
+import HardBreak from "@tiptap/extension-hard-break";
 
 export default () => {
   const editor = useEditor({
-    extensions: [Document, Paragraph, Text, BulletList, OrderedList, ListItem],
+    extensions: [
+      StarterKit,
+      HorizontalRule,
+      HardBreak, // Optional: adds Shift+Enter line breaks
+    ],
     editorProps: {
       attributes: {
-        class:
-          "prose prose-sm sm:prose-base lg:prose-lg xl:prose-2xl m-5 focus:outline-none",
+        class: "text-lg focus:outline-none",
       },
     },
     content: `
