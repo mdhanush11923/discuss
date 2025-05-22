@@ -21,9 +21,19 @@ export default async function CommentList({ postId }: CommentListProps) {
     );
   });
 
+  const commentCount = comments.length;
+
+  const heading =
+    commentCount === 0
+      ? "Be the first to comment!"
+      : commentCount === 1
+      ? "1 comment"
+      : `All ${commentCount} comments`;
+
+
   return (
     <div className="space-y-3">
-      <h1 className="text-lg font-bold">All {comments.length} comments</h1>
+      <h1 className="text-lg font-bold">{heading}</h1>
       {renderedComments}
     </div>
   );
