@@ -7,14 +7,14 @@ import StarsRoundedIcon from "@mui/icons-material/StarsRounded";
 
 export default function HomePage() {
   return (
-    <div className="grid re:grid-cols-4 grid-cols-1 gap-6">
+    <div className="grid re:grid-cols-4 grid-cols-1 gap-8">
       <div className="re:col-span-3">
         <h1 className="text-xl mb-5">
           <StarsRoundedIcon fontSize="small" /> Top Posts
         </h1>
         <PostList fetchData={() => fetchTopPosts()} />
       </div>
-      <div className="flex flex-col max-h-min rounded-md bg-white border max-w-72 mx-auto px-5 py-3 shadow">
+      <div className="flex flex-col max-h-min rounded-md bg-white border max-w-72 mx-auto re:-mr-5 px-5 py-3 shadow">
         <div className="flex w-full justify-center py-3">
           <TopicCreateForm />
         </div>

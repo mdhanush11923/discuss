@@ -6,6 +6,7 @@ import { Link } from "@heroui/link";
 import NextLink from "next/link";
 import { Suspense } from "react";
 import Loading from "./loading";
+import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 interface PostShowPageProps {
   params: Promise<{ slug: string; postId: string }>;
 }
@@ -22,8 +23,9 @@ export default async function PostShowPage({ params }: PostShowPageProps) {
         href={paths.topicShow(slug)}
         size="sm"
         underline="always"
+        className="re:-ml-7"
       >
-        {"< "}More on {slug}
+        <ArrowBackIcon/> More on {slug}
       </Link>
       <Suspense fallback={<Loading />}>
         <PostShow postId={postId} />
