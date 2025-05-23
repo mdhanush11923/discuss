@@ -102,5 +102,6 @@ export async function createPost(
   }
 
   revalidatePath(paths.topicShow(slug));
+  revalidatePath(paths.home())
   redirect(paths.postShow(slug, post.id))
 }

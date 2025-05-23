@@ -25,7 +25,7 @@ export default async function CommentShow({ commentId, postId, showReplies }: Co
     : null;
 
   return (
-    <div className="p-2 sm:p-4 border border-l-2 border-l-gray-300 mt-2 mb-1">
+    <div className="p-2 sm:p-4 bg-gray-50 border border-l-2 border-l-gray-300 mt-2 mb-1">
       <div className="flex gap-3">
         <Image
           src={comment.user.image || ""}

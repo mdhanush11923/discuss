@@ -6,7 +6,6 @@ import { Link } from "@heroui/link";
 import NextLink from "next/link";
 import { Suspense } from "react";
 import Loading from "./loading";
-import { Divider } from "@heroui/react";
 interface PostShowPageProps {
   params: Promise<{ slug: string; postId: string }>;
 }
@@ -30,9 +29,10 @@ export default async function PostShowPage({ params }: PostShowPageProps) {
         <PostShow postId={postId} />
       </Suspense>
 
-      <CommentCreateForm postId={postId} startOpen />
-      <Divider className="my-10 " />
-      <CommentList postId={postId} />
+      <div className="flex flex-col gap-10">
+        <CommentCreateForm postId={postId} startOpen />
+        <CommentList postId={postId} />
+      </div>
     </div>
   );
 }

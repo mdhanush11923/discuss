@@ -25,118 +25,6 @@
 }
 
 @font-face {
-  font-family: 'Quincy CF';
-  src: url('/fonts/quincy/QuincyCF-Black.otf') format('opentype');
-  font-weight: 900;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Quincy CF';
-  src: url('/fonts/quincy/QuincyCF-BlackItalic.otf') format('opentype');
-  font-weight: 900;
-  font-style: italic;
-}
-
-@font-face {
-  font-family: 'Quincy CF';
-  src: url('/fonts/quincy/QuincyCF-Bold.otf') format('opentype');
-  font-weight: 700;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Quincy CF';
-  src: url('/fonts/quincy/QuincyCF-BoldItalic.otf') format('opentype');
-  font-weight: 700;
-  font-style: italic;
-}
-
-@font-face {
-  font-family: 'Quincy CF';
-  src: url('/fonts/quincy/QuincyCF-ExtraBold.otf') format('opentype');
-  font-weight: 800;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Quincy CF';
-  src: url('/fonts/quincy/QuincyCF-ExtraBoldItalic.otf') format('opentype');
-  font-weight: 800;
-  font-style: italic;
-}
-
-@font-face {
-  font-family: 'Quincy CF';
-  src: url('/fonts/quincy/QuincyCF-Light.otf') format('opentype');
-  font-weight: 300;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Quincy CF';
-  src: url('/fonts/quincy/QuincyCF-LightItalic.otf') format('opentype');
-  font-weight: 300;
-  font-style: italic;
-}
-
-@font-face {
-  font-family: 'Quincy CF';
-  src: url('/fonts/quincy/QuincyCF-Medium.otf') format('opentype');
-  font-weight: 500;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Quincy CF';
-  src: url('/fonts/quincy/QuincyCF-MediumItalic.otf') format('opentype');
-  font-weight: 500;
-  font-style: italic;
-}
-
-@font-face {
-  font-family: 'Quincy CF';
-  src: url('/fonts/quincy/QuincyCF-Regular.otf') format('opentype');
-  font-weight: 400;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Quincy CF';
-  src: url('/fonts/quincy/QuincyCF-RegularItalic.otf') format('opentype');
-  font-weight: 400;
-  font-style: italic;
-}
-
-@font-face {
-  font-family: 'Quincy CF';
-  src: url('/fonts/quincy/QuincyCF-Text.otf') format('opentype');
-  font-weight: 450;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Quincy CF';
-  src: url('/fonts/quincy/QuincyCF-TextItalic.otf') format('opentype');
-  font-weight: 450;
-  font-style: italic;
-}
-
-@font-face {
-  font-family: 'Quincy CF';
-  src: url('/fonts/quincy/QuincyCF-Thin.otf') format('opentype');
-  font-weight: 100;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Quincy CF';
-  src: url('/fonts/quincy/QuincyCF-ThinItalic.otf') format('opentype');
-  font-weight: 100;
-  font-style: italic;
-}
-
-@font-face {
   font-family: 'Wotfard';
   src: url('/fonts/wotfard/Wotfard-Regular.otf') format('opentype');
   font-weight: 400;
@@ -146,4 +34,21 @@
 
 body {
   font-family: 'Wotfard', sans-serif;
+}
+
+html {
+  --s: 10px; /* control the size*/
+  --c1: #f0f0f0;
+  --c2: #ffffff;
+
+  --_c:5%,#0000 75%,var(--c1) 0;
+  --_g:/var(--s) var(--s) conic-gradient(at var(--_c));
+  --_l:/var(--s) var(--s) conic-gradient(at 50% var(--_c));
+  background:
+    0 calc(7*var(--s)/10) var(--_l),
+    calc(var(--s)/2) calc(var(--s)/5) var(--_l),
+    calc(var(--s)/5) 0 var(--_g),
+    calc(7*var(--s)/10) calc(var(--s)/2) var(--_g),
+    conic-gradient(at 90% 90%,var(--c1) 75%,var(--c2) 0)
+    0 0/calc(var(--s)/2) calc(var(--s)/2);
 }

@@ -19,7 +19,7 @@ export default function RootLayout({
       <body className={`antialiased`}>
         <Providers>
           <Header />
-          <div className="container min-h-screen mx-auto px-4 max-w-6xl pt-28">
+          <div className="container min-h-screen mx-auto px-6 max-w-5xl pt-28">
             {children}
           </div>
         </Providers>
