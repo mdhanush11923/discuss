@@ -1,6 +1,10 @@
-import React from 'react'
-import Tiptap from '@/components/Tiptap'
+import React from "react";
+import Tiptap from "@/components/Tiptap";
 
 export default function PostCreatePage() {
-  return <Tiptap />;
+  return (
+    <div className="p-10 -m-10 bg-white">
+      <Tiptap />
+    </div>
+  );
 }
